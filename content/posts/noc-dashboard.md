@@ -5,6 +5,10 @@ date: 2026-05-10
 author: ["Chase Dumphord"]
 tags: ["grafana", "prometheus", "homelab", "observability", "monitoring", "noc", "kubernetes", "proxmox", "devops", "infrastructure-monitoring"]
 description: "How I built a real-time homelab NOC dashboard using Grafana, Prometheus, Blackbox Exporter, Kubernetes, and Proxmox to monitor infrastructure like an enterprise environment — and the hard lessons learned along the way."
+cover:
+  image: /images/noc-dashboard-cover.png
+  alt: "Ced's Home Lab NOC Dashboard — Production Command Center"
+  relative: false
 ---
 
 At some point in every homelab journey, you stop asking:

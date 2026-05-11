@@ -5,6 +5,10 @@ date: 2026-05-07
 author: ["Chase Dumphord"]
 tags: ["homelab", "proxmox", "self-hosting", "high-availability", "kubernetes", "raspberry-pi", "infrastructure", "origin-story"]
 description: "The story behind Ced's Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure."
+cover:
+  image: /images/origin-story-cover.png
+  alt: "Ced's Home Lab — From a trash Dell to a 6-node Proxmox cluster"
+  relative: false
 ---
 
 Most people see an old computer sitting beside a dumpster and think:
