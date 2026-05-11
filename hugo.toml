@@ -1,0 +1,87 @@
+baseURL = "https://cedshomelab.com/"
+languageCode = "en-us"
+title = "Ced's Home Lab"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[params]
+  env = "production"
+  title = "Ced's Home Lab"
+  description = "Infrastructure engineering, homelab builds, and DevOps from the ground up — by Chase Dumphord"
+  keywords = ["homelab", "kubernetes", "k3s", "grafana", "prometheus", "devops", "proxmox", "self-hosted"]
+  author = "Chase Dumphord"
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+[params.homeInfoParams]
+  Title = "Hey, I'm Ced 👋"
+  Content = """
+I'm a Digital Systems Engineer at GE Aerospace building production-grade infrastructure at home — \
+6-node Proxmox cluster, 12-node K3s Raspberry Pi cluster, full observability stack, and a live NOC dashboard. \
+This blog is where I document the builds, the breaks, and everything in between.
+"""
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/ced4568"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/chase-dumphord"
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "ebooks"
+    name = "Ebooks"
+    url = "/ebooks/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "noc"
+    name = "Live NOC 🟢"
+    url = "https://noc.chasedumphord.com"
+    weight = 40
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[markup.highlight]
+  noClasses = false

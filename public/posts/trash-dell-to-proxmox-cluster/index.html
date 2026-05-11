@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="dark">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>I Found a Dell Tower in the Trash. Five Years Later It&#39;s a 6-Node Proxmox HA Cluster. | Ced&#39;s Home Lab</title>
+<meta name="keywords" content="homelab, proxmox, self-hosting, high-availability, kubernetes, raspberry-pi, infrastructure, origin-story">
+<meta name="description" content="The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.">
+<meta name="author" content="Chase Dumphord">
+<link rel="canonical" href="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
+  <meta property="og:site_name" content="Ced&#39;s Home Lab">
+  <meta property="og:title" content="I Found a Dell Tower in the Trash. Five Years Later It&#39;s a 6-Node Proxmox HA Cluster.">
+  <meta property="og:description" content="The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-07T00:00:00+00:00">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Proxmox">
+    <meta property="article:tag" content="Self-Hosting">
+    <meta property="article:tag" content="High-Availability">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="Raspberry-Pi">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="I Found a Dell Tower in the Trash. Five Years Later It&#39;s a 6-Node Proxmox HA Cluster.">
+  <meta name="twitter:description" content="The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "I Found a Dell Tower in the Trash. Five Years Later It's a 6-Node Proxmox HA Cluster.",
+      "item": "http://localhost:1313/posts/trash-dell-to-proxmox-cluster/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "I Found a Dell Tower in the Trash. Five Years Later It's a 6-Node Proxmox HA Cluster.",
+  "name": "I Found a Dell Tower in the Trash. Five Years Later It\u0027s a 6-Node Proxmox HA Cluster.",
+  "description": "The story behind Ced's Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.",
+  "keywords": [
+    "homelab", "proxmox", "self-hosting", "high-availability", "kubernetes", "raspberry-pi", "infrastructure", "origin-story"
+  ],
+  "articleBody": "Most people see an old computer sitting beside a dumpster and think:\n“Yeah… somebody finally got rid of that thing.”\nMe? I saw potential.\nNow before anybody starts judging me — yes, I know how this sounds. But if you’re in the homelab world, into computers, electronics, or just like tinkering with tech, then you already know the truth:\nOld hardware isn’t dead hardware. It’s just waiting for somebody nerdy enough to resurrect it.\nAnd that’s exactly how Ced’s Home Lab started.\nNo fancy rack. No enterprise gear. No thousand-dollar server. Just a random Dell tower somebody threw away — and way too much curiosity.\nThat server got a name: BigWorld. One of my nicknames. Felt right.\nIt Started With Curiosity I’ve always been the kind of person who likes figuring out how things work. Electronics. Computers. Networks. Industrial systems. If it had wires or data moving through it, I wanted to understand it.\nBack then I was working as a contractor for the Department of Homeland Security. I wasn’t thinking “I’m going to build an enterprise-grade homelab.” I was thinking “Can I make this thing useful again?”\nBigWorld became a playground. Then a learning tool. Then a media server. Then I discovered Proxmox VE — an open-source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home — and everything changed.\nInstead of “one computer does one thing”, it became “one machine can become an entire ecosystem.”\nThat shift unlocked everything.\nThe Homelab Rabbit Hole Is Real If you’re reading this and already have a homelab, you know exactly what I mean.\nYou start small. Maybe you install Linux. Maybe spin up a Docker container. Then suddenly you’re saying things like:\n“I think I need high availability.”\nSir. You host exactly three services. Why are we discussing redundancy?\nBut that’s the beauty of a homelab — it’s not just about hosting stuff. It’s about learning by building. Breaking things. Fixing things. Learning enterprise technologies without waiting for permission.\nOne VM became ten. The media server became a proper hypervisor. I kept following the rabbit hole. Five years later here’s what that rabbit hole looks like:\nWhat’s Running Today Compute — Proxmox HA Cluster (6 Nodes)\nBigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooShort, Tupac, and DrDre. The naming convention was non-negotiable.\nNode Role BigWorld Primary — cluster anchor, original lab server Biggie Compute node Snoop Compute node TooShort Compute node Tupac Compute node DrDre Compute node Orchestration — 12-Node K3s Cluster on Raspberry Pi\n12 Raspberry Pi 4B nodes running K3s. 3 control plane nodes for HA etcd, 9 workers split by role — ingress, data, and monitoring. 117+ days of continuous uptime. Not bad for hardware that costs less than a server HDD.\nStorage — TrueNAS\nZFS pool with NFS exports for Proxmox VM disk images and SMB shares for media. Because if your storage isn’t redundant, your storage isn’t real.\nNetworking — UniFi + Cloudflare\nFour VLANs: Main, IoT, HomeLab, and Guest. Zero open ports. All external traffic routes through Cloudflare Tunnels → Nginx Proxy Manager → internal service. Nobody gets in without going through Cloudflare first.\nObservability — Ced’s NOC\nPrometheus + Grafana + 8 exporters running 24/7. Live dashboard at noc.chasedumphord.com. More on this in the next post.\nEdge — APRS RF iGate\nA dual-node system that receives APRS radio packets and forwards them to the internet. Bridges RF signals into IP infrastructure. Because sometimes the most interesting engineering problems involve an antenna and a Raspberry Pi Zero.\nThe Real Reason I Built This People ask me sometimes: “Why build all this?”\nFair question. Nobody needs a homelab this ridiculous.\nBut I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems — MTConnect agents, machine data integration, real-time operational visibility. That environment changed how I think about infrastructure.\nWhen you’re building systems where downtime has real consequences, you stop treating monitoring as optional. You stop treating network segmentation as something you’ll get to eventually. You build it right from the start.\nThe homelab reflects that now. Everything I build at home mirrors patterns I apply at work. The VLAN segmentation mirrors OT/IT network separation. The observability stack mirrors production monitoring practices. The K3s cluster mirrors container orchestration at scale.\nThere’s a huge difference between “I watched a video about Kubernetes” and “I run a 12-node Kubernetes cluster on Raspberry Pis with 117 days of uptime.”\nThat hands-on experience matters. A lot.\nWhat’s Next This blog is where I’ll document everything: homelab builds, infrastructure projects, monitoring, networking, observability, and probably a few moments where I accidentally break my own environment and have to figure out why.\nEvery week there’s something new breaking, something new to learn, something new to build. That’s the process. And honestly? That’s the fun part.\nThe next post covers Ced’s NOC — how I built a production-style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.\nIf you’re building something at home that’s taught you more than any certification, I’d love to hear about it.\nChase Dumphord — Digital Systems Engineer at GE Aerospace. Building industrial data systems by day, homelab infrastructure by night, out of Oxford, MS.\n🔗 Links:\nPortfolio — chasedumphord.com Live NOC Dashboard — noc.chasedumphord.com Synthos Systems — synthossystems.com GitHub — ced4568 ",
+  "wordCount" : "905",
+  "inLanguage": "en",
+  "datePublished": "2026-05-07T00:00:00Z",
+  "dateModified": "2026-05-07T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Chase Dumphord"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/trash-dell-to-proxmox-cluster/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ced's Home Lab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Ced&#39;s Home Lab (Alt + H)">Ced&#39;s Home Lab</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ebooks/" title="Ebooks">
+                    <span>Ebooks</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://noc.chasedumphord.com" title="Live NOC 🟢">
+                    <span>Live NOC 🟢</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">Posts</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      I Found a Dell Tower in the Trash. Five Years Later It&#39;s a 6-Node Proxmox HA Cluster.
+    </h1>
+    <div class="post-description">
+      The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.
+    </div>
+    <div class="post-meta">
+
+<span title='2026-05-07 00:00:00 +0000 UTC'>May 7, 2026</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>Chase Dumphord</span>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#it-started-with-curiosity">It Started With Curiosity</a></li>
+    <li><a href="#the-homelab-rabbit-hole-is-real">The Homelab Rabbit Hole Is Real</a></li>
+    <li><a href="#whats-running-today">What&rsquo;s Running Today</a></li>
+    <li><a href="#the-real-reason-i-built-this">The Real Reason I Built This</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next</a></li>
+  </ul>
+</nav>
+    </div>
+</details>
+
+  <div class="post-content md-content"><p>Most people see an old computer sitting beside a dumpster and think:</p>
+<p><em>&ldquo;Yeah… somebody finally got rid of that thing.&rdquo;</em></p>
+<p>Me? I saw potential.</p>
+<p>Now before anybody starts judging me — yes, I know how this sounds. But if you&rsquo;re in the homelab world, into computers, electronics, or just like tinkering with tech, then you already know the truth:</p>
+<p><strong>Old hardware isn&rsquo;t dead hardware. It&rsquo;s just waiting for somebody nerdy enough to resurrect it.</strong></p>
+<p>And that&rsquo;s exactly how Ced&rsquo;s Home Lab started.</p>
+<p>No fancy rack. No enterprise gear. No thousand-dollar server. Just a random Dell tower somebody threw away — and way too much curiosity.</p>
+<p>That server got a name: <strong>BigWorld</strong>. One of my nicknames. Felt right.</p>
+<hr>
+<h2 id="it-started-with-curiosity">It Started With Curiosity<a hidden class="anchor" aria-hidden="true" href="#it-started-with-curiosity">#</a></h2>
+<p>I&rsquo;ve always been the kind of person who likes figuring out how things work. Electronics. Computers. Networks. Industrial systems. If it had wires or data moving through it, I wanted to understand it.</p>
+<p>Back then I was working as a contractor for the Department of Homeland Security. I wasn&rsquo;t thinking <em>&ldquo;I&rsquo;m going to build an enterprise-grade homelab.&rdquo;</em> I was thinking <em>&ldquo;Can I make this thing useful again?&rdquo;</em></p>
+<p>BigWorld became a playground. Then a learning tool. Then a media server. Then I discovered <strong>Proxmox VE</strong> — an open-source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home — and everything changed.</p>
+<p>Instead of <em>&ldquo;one computer does one thing&rdquo;</em>, it became <em>&ldquo;one machine can become an entire ecosystem.&rdquo;</em></p>
+<p>That shift unlocked everything.</p>
+<hr>
+<h2 id="the-homelab-rabbit-hole-is-real">The Homelab Rabbit Hole Is Real<a hidden class="anchor" aria-hidden="true" href="#the-homelab-rabbit-hole-is-real">#</a></h2>
+<p>If you&rsquo;re reading this and already have a homelab, you know exactly what I mean.</p>
+<p>You start small. Maybe you install Linux. Maybe spin up a Docker container. Then suddenly you&rsquo;re saying things like:</p>
+<p><em>&ldquo;I think I need high availability.&rdquo;</em></p>
+<p>Sir. You host exactly three services. Why are we discussing redundancy?</p>
+<p>But that&rsquo;s the beauty of a homelab — it&rsquo;s not just about hosting stuff. It&rsquo;s about learning by building. Breaking things. Fixing things. Learning enterprise technologies without waiting for permission.</p>
+<p>One VM became ten. The media server became a proper hypervisor. I kept following the rabbit hole. Five years later here&rsquo;s what that rabbit hole looks like:</p>
+<hr>
+<h2 id="whats-running-today">What&rsquo;s Running Today<a hidden class="anchor" aria-hidden="true" href="#whats-running-today">#</a></h2>
+<p><strong>Compute — Proxmox HA Cluster (6 Nodes)</strong></p>
+<p>BigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooShort, Tupac, and DrDre. The naming convention was non-negotiable.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Node</th>
+          <th>Role</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>BigWorld</td>
+          <td>Primary — cluster anchor, original lab server</td>
+      </tr>
+      <tr>
+          <td>Biggie</td>
+          <td>Compute node</td>
+      </tr>
+      <tr>
+          <td>Snoop</td>
+          <td>Compute node</td>
+      </tr>
+      <tr>
+          <td>TooShort</td>
+          <td>Compute node</td>
+      </tr>
+      <tr>
+          <td>Tupac</td>
+          <td>Compute node</td>
+      </tr>
+      <tr>
+          <td>DrDre</td>
+          <td>Compute node</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Orchestration — 12-Node K3s Cluster on Raspberry Pi</strong></p>
+<p>12 Raspberry Pi 4B nodes running K3s. 3 control plane nodes for HA etcd, 9 workers split by role — ingress, data, and monitoring. 117+ days of continuous uptime. Not bad for hardware that costs less than a server HDD.</p>
+<p><strong>Storage — TrueNAS</strong></p>
+<p>ZFS pool with NFS exports for Proxmox VM disk images and SMB shares for media. Because if your storage isn&rsquo;t redundant, your storage isn&rsquo;t real.</p>
+<p><strong>Networking — UniFi + Cloudflare</strong></p>
+<p>Four VLANs: Main, IoT, HomeLab, and Guest. Zero open ports. All external traffic routes through Cloudflare Tunnels → Nginx Proxy Manager → internal service. Nobody gets in without going through Cloudflare first.</p>
+<p><strong>Observability — Ced&rsquo;s NOC</strong></p>
+<p>Prometheus + Grafana + 8 exporters running 24/7. Live dashboard at <a href="https://noc.chasedumphord.com">noc.chasedumphord.com</a>. More on this in the next post.</p>
+<p><strong>Edge — APRS RF iGate</strong></p>
+<p>A dual-node system that receives APRS radio packets and forwards them to the internet. Bridges RF signals into IP infrastructure. Because sometimes the most interesting engineering problems involve an antenna and a Raspberry Pi Zero.</p>
+<hr>
+<h2 id="the-real-reason-i-built-this">The Real Reason I Built This<a hidden class="anchor" aria-hidden="true" href="#the-real-reason-i-built-this">#</a></h2>
+<p>People ask me sometimes: <em>&ldquo;Why build all this?&rdquo;</em></p>
+<p>Fair question. Nobody needs a homelab this ridiculous.</p>
+<p>But I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems — MTConnect agents, machine data integration, real-time operational visibility. That environment changed how I think about infrastructure.</p>
+<p>When you&rsquo;re building systems where downtime has real consequences, you stop treating monitoring as optional. You stop treating network segmentation as something you&rsquo;ll get to eventually. You build it right from the start.</p>
+<p>The homelab reflects that now. Everything I build at home mirrors patterns I apply at work. The VLAN segmentation mirrors OT/IT network separation. The observability stack mirrors production monitoring practices. The K3s cluster mirrors container orchestration at scale.</p>
+<p>There&rsquo;s a huge difference between <em>&ldquo;I watched a video about Kubernetes&rdquo;</em> and <em>&ldquo;I run a 12-node Kubernetes cluster on Raspberry Pis with 117 days of uptime.&rdquo;</em></p>
+<p>That hands-on experience matters. A lot.</p>
+<hr>
+<h2 id="whats-next">What&rsquo;s Next<a hidden class="anchor" aria-hidden="true" href="#whats-next">#</a></h2>
+<p>This blog is where I&rsquo;ll document everything: homelab builds, infrastructure projects, monitoring, networking, observability, and probably a few moments where I accidentally break my own environment and have to figure out why.</p>
+<p>Every week there&rsquo;s something new breaking, something new to learn, something new to build. That&rsquo;s the process. And honestly? That&rsquo;s the fun part.</p>
+<p>The next post covers <strong>Ced&rsquo;s NOC</strong> — how I built a production-style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.</p>
+<p>If you&rsquo;re building something at home that&rsquo;s taught you more than any certification, I&rsquo;d love to hear about it.</p>
+<hr>
+<p><em>Chase Dumphord — Digital Systems Engineer at GE Aerospace. Building industrial data systems by day, homelab infrastructure by night, out of Oxford, MS.</em></p>
+<p><strong>🔗 Links:</strong></p>
+<ul>
+<li><a href="https://chasedumphord.com">Portfolio — chasedumphord.com</a></li>
+<li><a href="https://noc.chasedumphord.com">Live NOC Dashboard — noc.chasedumphord.com</a></li>
+<li><a href="https://synthossystems.com">Synthos Systems — synthossystems.com</a></li>
+<li><a href="https://github.com/ced4568">GitHub — ced4568</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/homelab/">Homelab</a></li>
+      <li><a href="http://localhost:1313/tags/proxmox/">Proxmox</a></li>
+      <li><a href="http://localhost:1313/tags/self-hosting/">Self-Hosting</a></li>
+      <li><a href="http://localhost:1313/tags/high-availability/">High-Availability</a></li>
+      <li><a href="http://localhost:1313/tags/kubernetes/">Kubernetes</a></li>
+      <li><a href="http://localhost:1313/tags/raspberry-pi/">Raspberry-Pi</a></li>
+      <li><a href="http://localhost:1313/tags/infrastructure/">Infrastructure</a></li>
+      <li><a href="http://localhost:1313/tags/origin-story/">Origin-Story</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/grafana-prometheus-homelab-noc/">
+    <span class="title">« Prev</span>
+    <span>How I Built a Live NOC Dashboard for My Homelab Using Grafana &#43; Prometheus</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Ced&#39;s Home Lab</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
