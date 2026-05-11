@@ -83,5 +83,12 @@ This blog is where I document the builds, the breaks, and everything in between.
   tag = "tags"
   series = "series"
 
+[params.assets]
+  favicon = "/favicon.ico"
+  favicon16x16 = "/favicon-16x16.png"
+  favicon32x32 = "/favicon-32x32.png"
+  apple_touch_icon = "/android-chrome-192x192.png"
+  theme_color = "#0d1117"
+
 [markup.highlight]
   noClasses = false
