@@ -1,4 +1,4 @@
-baseURL = "https://cedshomelab.com/"
+baseURL = "https://ced4568.github.io/ceds-blog/"
 languageCode = "en-us"
 title = "Ced's Home Lab"
 theme = "PaperMod"
