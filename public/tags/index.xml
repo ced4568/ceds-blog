@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Ced&#39;s Home Lab</title>
-    <link>http://localhost:1313/ceds-blog/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Ced&#39;s Home Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/ceds-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Devops</title>
-      <link>http://localhost:1313/ceds-blog/tags/devops/</link>
+      <link>http://localhost:1313/tags/devops/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/devops/</guid>
+      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Grafana</title>
-      <link>http://localhost:1313/ceds-blog/tags/grafana/</link>
+      <link>http://localhost:1313/tags/grafana/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/grafana/</guid>
+      <guid>http://localhost:1313/tags/grafana/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>http://localhost:1313/ceds-blog/tags/homelab/</link>
+      <link>http://localhost:1313/tags/homelab/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/homelab/</guid>
+      <guid>http://localhost:1313/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure-Monitoring</title>
-      <link>http://localhost:1313/ceds-blog/tags/infrastructure-monitoring/</link>
+      <link>http://localhost:1313/tags/infrastructure-monitoring/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/infrastructure-monitoring/</guid>
+      <guid>http://localhost:1313/tags/infrastructure-monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:1313/ceds-blog/tags/kubernetes/</link>
+      <link>http://localhost:1313/tags/kubernetes/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/kubernetes/</guid>
+      <guid>http://localhost:1313/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Monitoring</title>
-      <link>http://localhost:1313/ceds-blog/tags/monitoring/</link>
+      <link>http://localhost:1313/tags/monitoring/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/monitoring/</guid>
+      <guid>http://localhost:1313/tags/monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Noc</title>
-      <link>http://localhost:1313/ceds-blog/tags/noc/</link>
+      <link>http://localhost:1313/tags/noc/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/noc/</guid>
+      <guid>http://localhost:1313/tags/noc/</guid>
       <description></description>
     </item>
     <item>
       <title>Observability</title>
-      <link>http://localhost:1313/ceds-blog/tags/observability/</link>
+      <link>http://localhost:1313/tags/observability/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/observability/</guid>
+      <guid>http://localhost:1313/tags/observability/</guid>
       <description></description>
     </item>
     <item>
       <title>Prometheus</title>
-      <link>http://localhost:1313/ceds-blog/tags/prometheus/</link>
+      <link>http://localhost:1313/tags/prometheus/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/prometheus/</guid>
+      <guid>http://localhost:1313/tags/prometheus/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxmox</title>
-      <link>http://localhost:1313/ceds-blog/tags/proxmox/</link>
+      <link>http://localhost:1313/tags/proxmox/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/proxmox/</guid>
+      <guid>http://localhost:1313/tags/proxmox/</guid>
       <description></description>
     </item>
     <item>
       <title>High-Availability</title>
-      <link>http://localhost:1313/ceds-blog/tags/high-availability/</link>
+      <link>http://localhost:1313/tags/high-availability/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/high-availability/</guid>
+      <guid>http://localhost:1313/tags/high-availability/</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure</title>
-      <link>http://localhost:1313/ceds-blog/tags/infrastructure/</link>
+      <link>http://localhost:1313/tags/infrastructure/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/infrastructure/</guid>
+      <guid>http://localhost:1313/tags/infrastructure/</guid>
       <description></description>
     </item>
     <item>
       <title>Origin-Story</title>
-      <link>http://localhost:1313/ceds-blog/tags/origin-story/</link>
+      <link>http://localhost:1313/tags/origin-story/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/origin-story/</guid>
+      <guid>http://localhost:1313/tags/origin-story/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry-Pi</title>
-      <link>http://localhost:1313/ceds-blog/tags/raspberry-pi/</link>
+      <link>http://localhost:1313/tags/raspberry-pi/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/raspberry-pi/</guid>
+      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Hosting</title>
-      <link>http://localhost:1313/ceds-blog/tags/self-hosting/</link>
+      <link>http://localhost:1313/tags/self-hosting/</link>
       <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ceds-blog/tags/self-hosting/</guid>
+      <guid>http://localhost:1313/tags/self-hosting/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/ceds-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ceds-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="homelab, proxmox, self-hosting, high-availability, kubernetes, raspberry-pi, infrastructure, origin-story">
 <meta name="description" content="The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.">
 <meta name="author" content="Chase Dumphord">
-<link rel="canonical" href="http://localhost:1313/ceds-blog/posts/trash-dell-to-proxmox-cluster/">
-<link crossorigin="anonymous" href="/ceds-blog/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/ceds-blog/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/ceds-blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/ceds-blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/ceds-blog/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/ceds-blog/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/ceds-blog/posts/trash-dell-to-proxmox-cluster/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
 <noscript>
     <style>
         #theme-toggle,
@@ -33,7 +33,7 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="http://localhost:1313/ceds-blog/posts/trash-dell-to-proxmox-cluster/">
+</script><meta property="og:url" content="http://localhost:1313/posts/trash-dell-to-proxmox-cluster/">
   <meta property="og:site_name" content="Ced&#39;s Home Lab">
   <meta property="og:title" content="I Found a Dell Tower in the Trash. Five Years Later It&#39;s a 6-Node Proxmox HA Cluster.">
   <meta property="og:description" content="The story behind Ced&#39;s Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure.">
@@ -63,13 +63,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "http://localhost:1313/ceds-blog/posts/"
+      "item": "http://localhost:1313/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "I Found a Dell Tower in the Trash. Five Years Later It's a 6-Node Proxmox HA Cluster.",
-      "item": "http://localhost:1313/ceds-blog/posts/trash-dell-to-proxmox-cluster/"
+      "item": "http://localhost:1313/posts/trash-dell-to-proxmox-cluster/"
     }
   ]
 }
@@ -95,14 +95,14 @@
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/ceds-blog/posts/trash-dell-to-proxmox-cluster/"
+    "@id": "http://localhost:1313/posts/trash-dell-to-proxmox-cluster/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Ced's Home Lab",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/ceds-blog/favicon.ico"
+      "url": "http://localhost:1313/favicon.ico"
     }
   }
 }
@@ -112,7 +112,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/ceds-blog/" accesskey="h" title="Ced&#39;s Home Lab (Alt + H)">Ced&#39;s Home Lab</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Ced&#39;s Home Lab (Alt + H)">Ced&#39;s Home Lab</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -138,17 +138,17 @@
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/ceds-blog/posts/" title="Blog">
+                <a href="http://localhost:1313/posts/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/ceds-blog/ebooks/" title="Ebooks">
+                <a href="http://localhost:1313/ebooks/" title="Ebooks">
                     <span>Ebooks</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/ceds-blog/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -171,12 +171,12 @@
 <article class="post-single">
   <header class="post-header">
     <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/ceds-blog/">Home</a>
+            <a href="/">Home</a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
                 <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
-            <a href="/ceds-blog/posts/">Posts</a>
+            <a href="/posts/">Posts</a>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
         <polyline points="9 18 15 12 9 6"></polyline>
@@ -311,17 +311,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/ceds-blog/tags/homelab/">Homelab</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/proxmox/">Proxmox</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/self-hosting/">Self-Hosting</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/high-availability/">High-Availability</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/kubernetes/">Kubernetes</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/raspberry-pi/">Raspberry-Pi</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/infrastructure/">Infrastructure</a></li>
-      <li><a href="http://localhost:1313/ceds-blog/tags/origin-story/">Origin-Story</a></li>
+      <li><a href="http://localhost:1313/tags/homelab/">Homelab</a></li>
+      <li><a href="http://localhost:1313/tags/proxmox/">Proxmox</a></li>
+      <li><a href="http://localhost:1313/tags/self-hosting/">Self-Hosting</a></li>
+      <li><a href="http://localhost:1313/tags/high-availability/">High-Availability</a></li>
+      <li><a href="http://localhost:1313/tags/kubernetes/">Kubernetes</a></li>
+      <li><a href="http://localhost:1313/tags/raspberry-pi/">Raspberry-Pi</a></li>
+      <li><a href="http://localhost:1313/tags/infrastructure/">Infrastructure</a></li>
+      <li><a href="http://localhost:1313/tags/origin-story/">Origin-Story</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/ceds-blog/posts/grafana-prometheus-homelab-noc/">
+  <a class="prev" href="http://localhost:1313/posts/grafana-prometheus-homelab-noc/">
     <span class="title">« Prev</span>
     <span>How I Built a Live NOC Dashboard for My Homelab Using Grafana &#43; Prometheus</span>
   </a>
@@ -332,7 +332,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/ceds-blog/">Ced&#39;s Home Lab</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Ced&#39;s Home Lab</a></span> · 
 
     
     
@@ -348,7 +348,11 @@
         <polyline points="17 11 12 6 7 11"></polyline>
         <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
-</a>
+</a><div style="margin: 2rem 0; padding: 1rem 0;">
+  <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="85038485-fceb-4888-8db6-63a4e112fb87"></script>
+</div>
+
+
 
 <script>
     let menu = document.getElementById('menu');
