@@ -14,6 +14,7 @@ buildExpired = false
   description = "Infrastructure engineering, homelab builds, and DevOps from the ground up — by Chase Dumphord"
   keywords = ["homelab", "kubernetes", "k3s", "grafana", "prometheus", "devops", "proxmox", "self-hosted"]
   author = "Chase Dumphord"
+  logo = "/images/logo-horizontal.png"
   defaultTheme = "dark"
   disableThemeToggle = false
   ShowReadingTime = true
