@@ -57,9 +57,9 @@ The visual side of the operation. Dashboards, real-time metrics, health indicato
 
 Three production dashboards:
 
-- **Production Command Center v3** — Executive NOC view. NOC Health Score, Core Services UP/DOWN counter, average latency, K3s nodes online, Proxmox nodes online, per-service status tiles. Designed for quick status checks and let's be honest portfolio demonstrations.
-- **Deep Observability v3** — Full drill-down for active troubleshooting. Every layer of the stack in one view.
-- **K3s Elite Observability v1** — Dedicated Kubernetes dashboard. Node CPU, memory, pod phase by namespace, container restarts, disk usage across all 12 nodes.
+- **Production Command Center v3** Executive NOC view. NOC Health Score, Core Services UP/DOWN counter, average latency, K3s nodes online, Proxmox nodes online, per-service status tiles. Designed for quick status checks and let's be honest portfolio demonstrations.
+- **Deep Observability v3** Full drill-down for active troubleshooting. Every layer of the stack in one view.
+- **K3s Elite Observability v1** Dedicated Kubernetes dashboard. Node CPU, memory, pod phase by namespace, container restarts, disk usage across all 12 nodes.
 
 ### The Exporter Stack
 
@@ -108,21 +108,21 @@ Building this taught me things no tutorial covers. Here are the four that hit ha
 
 Prometheus stores metrics as time-series data on disk. My initial Proxmox container was 3.86GB. After a few weeks of scraping 18 nodes every 15 seconds, it was at 94% capacity.
 
-When it hit 100%, every scrape started failing — silently. All targets showed as DOWN. Every dashboard went red. The entire stack looked broken when the actual problem was a full disk.
+When it hit 100%, every scrape started failing silently. All targets showed as DOWN. Every dashboard went red. The entire stack looked broken when the actual problem was a full disk.
 
-The fix was resizing the container disk from 3.86GB to 14GB in Proxmox — a 5-minute operation. But the diagnosis took longer because the error wasn't obvious.
+The fix was resizing the container disk from 3.86GB to 14GB in Proxmox a 5-minute operation. But the diagnosis took longer because the error wasn't obvious.
 
 **Rule of thumb:** Size your Prometheus storage at 20GB minimum for a setup this size. Add more if you extend retention beyond 30 days.
 
 ### 2. Docker bridge networking will block your exporters
 
-Blackbox Exporter and Unpoller run in Docker containers. Docker's default bridge networking isolates containers from the host network — which means they can't reach your internal VLAN IPs without extra configuration.
+Blackbox Exporter and Unpoller run in Docker containers. Docker's default bridge networking isolates containers from the host network which means they can't reach your internal VLAN IPs without extra configuration.
 
 The symptom: `connect: no route to host` on every internal target. The fix: `--network host` on the `docker run` command. One flag, immediately fixed. Should have been obvious. Wasn't.
 
 ### 3. UniFi rate limiting is aggressive and not well documented
 
-When I was repeatedly restarting the Unpoller container trying to debug the networking issue, the UniFi controller started returning `429 Too Many Requests` on every authentication attempt. It locked out all auth attempts for several minutes at a time — and kept resetting the timer every time I restarted the container.
+When I was repeatedly restarting the Unpoller container trying to debug the networking issue, the UniFi controller started returning `429 Too Many Requests` on every authentication attempt. It locked out all auth attempts for several minutes at a time and kept resetting the timer every time I restarted the container.
 
 The fix: stop the container completely, wait 10-15 full minutes without any connection attempts, then restart once with the correct config. Don't touch it while it's locked out. The rate limit resets from the last attempt, not from when it started.
 
@@ -176,10 +176,10 @@ Building a monitoring stack you actually care about keeping alive teaches you th
 
 The observability stack is solid but there's more to build:
 
-- **Alerting** — Grafana alert rules feeding into Discord or Telegram so I find out about problems before I find out about problems
-- **Log aggregation** — Loki for centralized log collection across all nodes
-- **Long-term storage** — InfluxDB or a remote Prometheus write target for metrics beyond local retention
-- **Automated remediation** — self-healing infrastructure that restarts failed services automatically
+- **Alerting** Grafana alert rules feeding into Discord or Telegram so I find out about problems before I find out about problems
+- **Log aggregation** Loki for centralized log collection across all nodes
+- **Long-term storage** InfluxDB or a remote Prometheus write target for metrics beyond local retention
+- **Automated remediation** self-healing infrastructure that restarts failed services automatically
 
 Each of these is a future post.
 
