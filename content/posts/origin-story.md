@@ -4,7 +4,7 @@ slug: "trash-dell-to-proxmox-cluster"
 date: 2026-05-07
 author: ["Chase Dumphord"]
 tags: ["homelab", "proxmox", "self-hosting", "high-availability", "kubernetes", "raspberry-pi", "infrastructure", "origin-story"]
-description: "The story behind Ced's Home Lab — how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure."
+description: "The story behind Ced's Home Lab how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure."
 cover:
   image: /images/origin-story-cover.png
   alt: "Ced's Home Lab — From a trash Dell to a 6-node Proxmox cluster"
@@ -17,13 +17,13 @@ Most people see an old computer sitting beside a dumpster and think:
 
 Me? I saw potential.
 
-Now before anybody starts judging me — yes, I know how this sounds. But if you're in the homelab world, into computers, electronics, or just like tinkering with tech, then you already know the truth:
+Now before anybody starts judging me yes, I know how this sounds. But if you're in the homelab world, into computers, electronics, or just like tinkering with tech, then you already know the truth:
 
 **Old hardware isn't dead hardware. It's just waiting for somebody nerdy enough to resurrect it.**
 
 And that's exactly how Ced's Home Lab started.
 
-No fancy rack. No enterprise gear. No thousand-dollar server. Just a random Dell tower somebody threw away — and way too much curiosity.
+No fancy rack. No enterprise gear. No thousand-dollar server. Just a random Dell tower somebody threw away and way too much curiosity.
 
 That server got a name: **BigWorld**. One of my nicknames. Felt right.
 
@@ -35,7 +35,7 @@ I've always been the kind of person who likes figuring out how things work. Elec
 
 Back then I was working as a contractor for the Department of Homeland Security. I wasn't thinking *"I'm going to build an enterprise-grade homelab."* I was thinking *"Can I make this thing useful again?"*
 
-BigWorld became a playground. Then a learning tool. Then a media server. Then I discovered **Proxmox VE** — an open-source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home — and everything changed.
+BigWorld became a playground. Then a learning tool. Then a media server. Then I discovered **Proxmox VE** an open-source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home and everything changed.
 
 Instead of *"one computer does one thing"*, it became *"one machine can become an entire ecosystem."*
 
@@ -53,7 +53,7 @@ You start small. Maybe you install Linux. Maybe spin up a Docker container. Then
 
 Sir. You host exactly three services. Why are we discussing redundancy?
 
-But that's the beauty of a homelab — it's not just about hosting stuff. It's about learning by building. Breaking things. Fixing things. Learning enterprise technologies without waiting for permission.
+But that's the beauty of a homelab it's not just about hosting stuff. It's about learning by building. Breaking things. Fixing things. Learning enterprise technologies without waiting for permission.
 
 One VM became ten. The media server became a proper hypervisor. I kept following the rabbit hole. Five years later here's what that rabbit hole looks like:
 
@@ -76,7 +76,7 @@ BigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooS
 
 **Orchestration — 12-Node K3s Cluster on Raspberry Pi**
 
-12 Raspberry Pi 4B nodes running K3s. 3 control plane nodes for HA etcd, 9 workers split by role — ingress, data, and monitoring. 117+ days of continuous uptime. Not bad for hardware that costs less than a server HDD.
+12 Raspberry Pi 4B nodes running K3s. 3 control plane nodes for HA etcd, 9 workers split by role ingress, data, and monitoring. 117+ days of continuous uptime. Not bad for hardware that costs less than a server HDD.
 
 **Storage — TrueNAS**
 
@@ -102,7 +102,7 @@ People ask me sometimes: *"Why build all this?"*
 
 Fair question. Nobody needs a homelab this ridiculous.
 
-But I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems — MTConnect agents, machine data integration, real-time operational visibility. That environment changed how I think about infrastructure.
+But I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems MTConnect agents, machine data integration, real-time operational visibility. That environment changed how I think about infrastructure.
 
 When you're building systems where downtime has real consequences, you stop treating monitoring as optional. You stop treating network segmentation as something you'll get to eventually. You build it right from the start.
 
@@ -120,13 +120,13 @@ This blog is where I'll document everything: homelab builds, infrastructure proj
 
 Every week there's something new breaking, something new to learn, something new to build. That's the process. And honestly? That's the fun part.
 
-The next post covers **Ced's NOC** — how I built a production-style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.
+The next post covers **Ced's NOC** how I built a production-style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.
 
 If you're building something at home that's taught you more than any certification, I'd love to hear about it.
 
 ---
 
-*Chase Dumphord — Digital Systems Engineer at GE Aerospace. Building industrial data systems by day, homelab infrastructure by night, out of Oxford, MS.*
+*Chase Dumphord Digital Systems Engineer at GE Aerospace. Building industrial data systems by day, homelab infrastructure by night, out of Oxford, MS.*
 
 **🔗 Links:**
 - [Portfolio — chasedumphord.com](https://chasedumphord.com)
