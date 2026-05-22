@@ -3,15 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cloudflare/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/devops/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/grafana/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/homelab/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/infrastructure/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/networking/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/security/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/self-hosted/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tunnels/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/cloudflare-tunnels-zero-open-ports/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/grafana/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/grafana-prometheus-homelab-noc/</loc>
@@ -32,25 +59,16 @@
     <loc>http://localhost:1313/tags/observability/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/prometheus/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/proxmox/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/high-availability/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/trash-dell-to-proxmox-cluster/</loc>
-    <lastmod>2026-05-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/infrastructure/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/origin-story/</loc>
