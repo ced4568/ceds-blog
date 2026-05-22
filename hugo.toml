@@ -11,10 +11,9 @@ buildExpired = false
 [params]
   env = "production"
   title = "Ced's Home Lab"
-  description = "Infrastructure engineering, homelab builds, and DevOps from the ground up — by Chase Dumphord"
+  description = "Infrastructure engineering, homelab builds, and DevOps from the ground up by Chase Dumphord"
   keywords = ["homelab", "kubernetes", "k3s", "grafana", "prometheus", "devops", "proxmox", "self-hosted"]
   author = "Chase Dumphord"
-  logo = "/images/logo-horizontal.png"
   defaultTheme = "dark"
   disableThemeToggle = false
   ShowReadingTime = true
@@ -32,16 +31,17 @@ buildExpired = false
   hideSummary = false
   showtoc = true
   tocopen = false
+
 [params.label]
   text = "Ced's Home Lab"
   icon = "/images/logo-horizontal.png"
   iconHeight = 36
 
 [params.homeInfoParams]
-  Title = "Hey, I'm Ced 👋"
+  Title = "Hey, I'm Ced"
   Content = """
-I'm a Digital Systems Engineer at GE Aerospace building production-grade infrastructure at home — \
-6-node Proxmox cluster, 12-node K3s Raspberry Pi cluster, full observability stack, and a live NOC dashboard. \
+I'm a DevOps and Cloud Infrastructure Engineer at GE Aerospace building production-grade infrastructure at home  \
+6 node Proxmox cluster, 12 node K3s Raspberry Pi cluster, full observability stack, and a live NOC dashboard. \
 This blog is where I document the builds, the breaks, and everything in between.
 """
 
@@ -79,7 +79,7 @@ This blog is where I document the builds, the breaks, and everything in between.
 
   [[menu.main]]
     identifier = "noc"
-    name = "Live NOC 🟢"
+    name = "Live NOC"
     url = "https://noc.chasedumphord.com"
     weight = 40
 
@@ -87,13 +87,6 @@ This blog is where I document the builds, the breaks, and everything in between.
   category = "categories"
   tag = "tags"
   series = "series"
-
-[params.assets]
-  favicon = "/favicon.ico"
-  favicon16x16 = "/favicon-16x16.png"
-  favicon32x32 = "/favicon-32x32.png"
-  apple_touch_icon = "/android-chrome-192x192.png"
-  theme_color = "#0d1117"
 
 [markup.highlight]
   noClasses = false

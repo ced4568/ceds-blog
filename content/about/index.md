@@ -1,15 +1,14 @@
 ---
 title: "About"
-layout: "about"
 url: "/about/"
-summary: "about"
+layout: "about"
 ---
 
-## Hey, I'm Chase — go by Ced.
+## Hey, I'm Chase but you can call me "Ced".
 
-I'm a Digital Systems Engineer at GE Aerospace by day, homelabber by night.
+I'm a DevOps and Cloud Infrastructure Engineer at GE Aerospace by day, homelabber by night.
 
-I run a 6-node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), VLAN-segmented UniFi network, TrueNAS storage, and a live NOC dashboard — all out of my house.
+I run a 6 node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), VLAN-segmented UniFi network, TrueNAS storage, and a live NOC dashboard all out of my house.
 
 This blog documents the real builds, real incidents, and real configs. No fluff.
 
@@ -24,4 +23,4 @@ This blog documents the real builds, real incidents, and real configs. No fluff.
 ## Find Me
 - GitHub: [ced4568](https://github.com/ced4568)
 - LinkedIn: [chase-dumphord](https://linkedin.com/in/chase-dumphord)
-- Portfolio: [chase-dumphord](https://chasedumphord.com/)
+- Portfolio: [chasedumphord.com](https://chasedumphord.com)
