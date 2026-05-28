@@ -23,6 +23,13 @@ layout: "about"
         <tr><td><strong>Network</strong></td><td>UniFi &middot; VLANs &middot; Cloudflare Tunnels</td></tr>
         <tr><td><strong>Storage</strong></td><td>TrueNAS</td></tr>
         <tr><td><strong>Domain</strong></td><td>cedshomelab.com</td></tr>
+        <tr><td><strong>DNS</strong></td><td>Pi-hole</td></tr>
+        <tr><td><strong>Reverse Proxy</strong></td><td>Nginx Proxy Manager</td></tr>
+        <tr><td><strong>VPN / Access</strong></td><td>Tailscale</td></tr>
+        <tr><td><strong>Containers</strong></td><td>Docker &middot; Portainer</td></tr>
+        <tr><td><strong>Automation</strong></td><td>n8n &middot; Node-RED &middot; Home Assistant</td></tr>
+        <tr><td><strong>CI/CD</strong></td><td>Jenkins &middot; GitLab</td></tr>
+        <tr><td><strong>VPS</strong></td><td>Hetzner &middot; 2 nodes</td></tr>
       </tbody>
     </table>
   </div>
