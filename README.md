@@ -46,11 +46,11 @@ The lab behind the blog: 6 node Proxmox VE cluster, 12 node K3s Kubernetes clust
 
 | Status | Post |
 |--------|------|
-| In progress | K3s on Raspberry Pi — 12 Nodes, 117 Days |
-| In progress | APRS iGate — Bridging RF and IP with a Raspberry Pi |
+| In progress | K3s on Raspberry Pi: 12 Nodes, 117 Days |
+| In progress | APRS iGate: Bridging RF and IP with a Raspberry Pi |
 | In progress | Why I Run 4 VLANs and How I Set Them Up |
 | In progress | Unpoller + Prometheus: Monitoring UniFi and the 429 Rate Limiting Problem |
-| In progress | MTConnect — The Industrial Protocol Nobody Talks About |
+| In progress | MTConnect: The Industrial Protocol Nobody Talks About |
 | In progress | Disk Full → Prometheus Dark: A Real Homelab Incident Report |
 | In progress | Building in Public: What KubeCraft Taught Me in 30 Days |
 | In progress | Deploying an AI Operations Assistant on a Hetzner VPS |
@@ -76,7 +76,7 @@ git push
 
 ## Ebooks
 
-Technical ebooks covering homelab infrastructure, Kubernetes, observability, and DevOps. Written from real production experience — not documentation rewrites, not beginner recaps. If it's in the ebook, it was built and tested in the lab first.
+Technical ebooks covering homelab infrastructure, Kubernetes, observability, and DevOps. Written from real production experience, not documentation rewrites, not beginner recaps. If it's in the ebook, it was built and tested in the lab first.
 
 [Browse on Gumroad](https://chasedumphord.gumroad.com)
 
@@ -84,7 +84,7 @@ Technical ebooks covering homelab infrastructure, Kubernetes, observability, and
 
 ## The Lab Behind Everything
 
-This blog is the public documentation layer of the same infrastructure that powers [Synthos Systems](https://synthossystems.com) — an AI systems agency built on real operational infrastructure, not cloud-only tooling. Every solution Synthos deploys for clients gets tested in this lab first. Proxmox, K3s, Grafana, Prometheus, TrueNAS — all of it running live before it ever touches a client environment.
+This blog is the public documentation layer of the same infrastructure that powers [Synthos Systems](https://synthossystems.com), an AI systems agency built on real operational infrastructure, not cloud-only tooling. Every solution Synthos deploys for clients gets tested in this lab first. Proxmox, K3s, Grafana, Prometheus, TrueNAS, all of it running live before it ever touches a client environment.
 
 That's the differentiator. Not just AI tools. Real systems.
 
@@ -97,7 +97,7 @@ That's the differentiator. Not just AI tools. Real systems.
 | [cedshomelab.com](https://cedshomelab.com) | Live blog |
 | [chasedumphord.com](https://chasedumphord.com) | Portfolio and NOC |
 | [noc.chasedumphord.com](https://noc.chasedumphord.com) | Live infrastructure dashboard |
-| [synthossystems.com](https://synthossystems.com) | Synthos Systems — AI agency built on this infrastructure |
+| [synthossystems.com](https://synthossystems.com) | Synthos Systems: AI agency built on this infrastructure |
 | [ceds-homelab](https://github.com/ced4568/ceds-homelab) | Homelab infrastructure repo |
 | [ced-k3s-homelab](https://github.com/ced4568/ced-k3s-homelab) | K3s cluster repo |
 
