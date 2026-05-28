@@ -326,6 +326,21 @@ body {
 }
 
  
+input[type="email"],
+input[type="text"] {
+  color: #1a1d26 !important;
+  background-color: #f5f7fa !important;
+  border: 1px solid rgba(45, 212, 191, 0.4) !important;
+  border-radius: 4px !important;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder {
+  color: #8a93a8 !important;
+  opacity: 1 !important;
+}
+
+ 
 @keyframes cedFadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }

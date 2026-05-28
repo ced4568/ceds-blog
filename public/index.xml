@@ -35,11 +35,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://cedshomelab.com/about/</guid>
       <description>&lt;div class=&#34;about-grid&#34;&gt;
-&lt;div class=&#34;about-bio&#34;&gt;
-&lt;h2 id=&#34;hey-im-chase--most-people-call-me-ced&#34;&gt;Hey, I&amp;rsquo;m Chase — most people call me Ced.&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m a &lt;strong&gt;DevOps and Cloud Infrastructure Engineer at GE Aerospace&lt;/strong&gt; by day, homelabber by night.&lt;/p&gt;
-&lt;p&gt;I run a 6-node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), a VLAN-segmented UniFi network, TrueNAS storage, and a live NOC dashboard — all out of my house.&lt;/p&gt;
-&lt;p&gt;This blog documents the real builds, real incidents, and real configs. No fluff.&lt;/p&gt;</description>
+  &lt;div class=&#34;about-bio&#34;&gt;
+    &lt;h2&gt;Hey, I&#39;m Chase — most people call me Ced.&lt;/h2&gt;
+    &lt;p&gt;I&#39;m a &lt;strong&gt;DevOps and Cloud Infrastructure Engineer at GE Aerospace&lt;/strong&gt; by day, homelabber by night.&lt;/p&gt;
+    &lt;p&gt;I run a 6-node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), a VLAN-segmented UniFi network, TrueNAS storage, and a live NOC dashboard — all out of my house.&lt;/p&gt;
+    &lt;p&gt;This blog documents the real builds, real incidents, and real configs. No fluff.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ebooks</title>
