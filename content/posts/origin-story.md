@@ -7,7 +7,7 @@ tags: ["homelab", "proxmox", "self-hosting", "high-availability", "kubernetes", 
 description: "The story behind Ced's Home Lab how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure."
 cover:
   image: /images/origin-story-cover.png
-  alt: "Ced's Home Lab — From a trash Dell to a 6-node Proxmox cluster"
+  alt: "Ced's Home Lab: From a trash Dell to a 6-node Proxmox cluster"
   relative: false
 ---
 
@@ -61,36 +61,36 @@ One VM became ten. The media server became a proper hypervisor. I kept following
 
 ## What's Running Today
 
-**Compute — Proxmox HA Cluster (6 Nodes)**
+**Compute: Proxmox HA Cluster (6 Nodes)**
 
 BigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooShort, Tupac, and DrDre. The naming convention was non-negotiable.
 
 | Node | Role |
 |------|------|
-| BigWorld | Primary — cluster anchor, original lab server |
+| BigWorld | Primary, cluster anchor, original lab server |
 | Biggie | Compute node |
 | Snoop | Compute node |
 | TooShort | Compute node |
 | Tupac | Compute node |
 | DrDre | Compute node |
 
-**Orchestration — 12-Node K3s Cluster on Raspberry Pi**
+**Orchestration: 12-Node K3s Cluster on Raspberry Pi**
 
 12 Raspberry Pi 4B nodes running K3s. 3 control plane nodes for HA etcd, 9 workers split by role ingress, data, and monitoring. 117+ days of continuous uptime. Not bad for hardware that costs less than a server HDD.
 
-**Storage — TrueNAS**
+**Storage: TrueNAS**
 
 ZFS pool with NFS exports for Proxmox VM disk images and SMB shares for media. Because if your storage isn't redundant, your storage isn't real.
 
-**Networking — UniFi + Cloudflare**
+**Networking: UniFi + Cloudflare**
 
 Four VLANs: Main, IoT, HomeLab, and Guest. Zero open ports. All external traffic routes through Cloudflare Tunnels → Nginx Proxy Manager → internal service. Nobody gets in without going through Cloudflare first.
 
-**Observability — Ced's NOC**
+**Observability: Ced's NOC**
 
 Prometheus + Grafana + 8 exporters running 24/7. Live dashboard at [noc.chasedumphord.com](https://noc.chasedumphord.com). More on this in the next post.
 
-**Edge — APRS RF iGate**
+**Edge: APRS RF iGate**
 
 A dual-node system that receives APRS radio packets and forwards them to the internet. Bridges RF signals into IP infrastructure. Because sometimes the most interesting engineering problems involve an antenna and a Raspberry Pi Zero.
 
@@ -129,7 +129,7 @@ If you're building something at home that's taught you more than any certificati
 *Chase Dumphord Digital Systems Engineer at GE Aerospace. Building industrial data systems by day, homelab infrastructure by night, out of Oxford, MS.*
 
 **🔗 Links:**
-- [Portfolio — chasedumphord.com](https://chasedumphord.com)
-- [Live NOC Dashboard — noc.chasedumphord.com](https://noc.chasedumphord.com)
-- [Synthos Systems — synthossystems.com](https://synthossystems.com)
-- [GitHub — ced4568](https://github.com/ced4568)
+- [Portfolio: chasedumphord.com](https://chasedumphord.com)
+- [Live NOC Dashboard: noc.chasedumphord.com](https://noc.chasedumphord.com)
+- [Synthos Systems: synthossystems.com](https://synthossystems.com)
+- [GitHub: ced4568](https://github.com/ced4568)

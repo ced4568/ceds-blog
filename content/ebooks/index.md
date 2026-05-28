@@ -32,4 +32,4 @@ All ebooks are available on Gumroad. Follow the store to get notified when new t
 
 ---
 
-*Built by a DevOps and Cloud Infrastructure Engineer at GE Aerospace — all infrastructure documented here is real and running 24/7.*
+*Built by a DevOps and Cloud Infrastructure Engineer at GE Aerospace. All infrastructure documented here is real and running 24/7.*

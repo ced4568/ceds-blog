@@ -70,7 +70,7 @@ This is where most of the actual work happened. Eight exporters feed data into P
 | Node Exporter | CPU, RAM, disk, network on all 18 nodes |
 | kube-state-metrics | Pod state, deployment health, replica counts |
 | Proxmox Exporter | Hypervisor node status, VM health, HA state |
-| Windows Exporter | PrimeStation — my main workstation |
+| Windows Exporter | PrimeStation, my main workstation |
 | Blackbox Exporter | HTTP/TCP probes for service uptime and latency |
 | TrueNAS Graphite Exporter | Storage pool health and dataset usage |
 | Unpoller | UniFi network device metrics, client counts, throughput |
@@ -82,11 +82,11 @@ Getting all of these running cleanly took more time than building the dashboards
 
 ## What I'm Monitoring
 
-**Proxmox Cluster — 6 Nodes**
+**Proxmox Cluster: 6 Nodes**
 
 Real-time visibility into BigWorld, Biggie, Snoop, TooShort, Tupac, and DrDre. Host health, resource utilization, node uptime, VM and container status. When a node goes sideways I know before the VMs do.
 
-**K3s Cluster — 12 Nodes**
+**K3s Cluster: 12 Nodes**
 
 3 control plane nodes, 9 workers split by role. Node availability, cluster performance, pod health, workload monitoring. 117+ days of continuous uptime and counting.
 
@@ -188,7 +188,7 @@ Each of these is a future post.
 *All configs and dashboard JSON exports are in the [ceds-observability-stack](https://github.com/ced4568/ceds-observability-stack) repo on GitHub.*
 
 **🔗 Links:**
-- [Portfolio — chasedumphord.com](https://chasedumphord.com)
-- [Live NOC Dashboard — noc.chasedumphord.com](https://noc.chasedumphord.com)
-- [Synthos Systems — synthossystems.com](https://synthossystems.com)
-- [GitHub — ced4568](https://github.com/ced4568)
+- [Portfolio: chasedumphord.com](https://chasedumphord.com)
+- [Live NOC Dashboard: noc.chasedumphord.com](https://noc.chasedumphord.com)
+- [Synthos Systems: synthossystems.com](https://synthossystems.com)
+- [GitHub: ced4568](https://github.com/ced4568)

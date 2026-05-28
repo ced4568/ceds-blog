@@ -32,7 +32,7 @@ I didn't want to play that game. I hadn't been compromised. Nothing had happened
 
 ---
 
-## Cloudflare Tunnels — The Concept
+## Cloudflare Tunnels: The Concept
 
 Cloudflare Tunnels work differently. Instead of opening inbound ports, your server reaches *out* to Cloudflare's network and establishes a persistent encrypted connection. Cloudflare sits in the middle your traffic flows from the internet → Cloudflare → through the tunnel → to your service. Your router never sees inbound traffic it didn't initiate.
 
@@ -94,8 +94,8 @@ Cloudflare Tunnels didn't just solve my remote access problem. They made my home
 
 ## What's Next
 
-If you want the full step-by-step setup guide — how to create a tunnel, configure routes, set up the wildcard DNS record, and manage 28+ services without losing your mind I'm putting that in an upcoming ebook.
+If you want the full step-by-step setup guide (how to create a tunnel, configure routes, set up the wildcard DNS record, and manage 28+ services without losing your mind) I'm putting that in an upcoming ebook.
 
 In the meantime, subscribe below to get notified when it drops, and check out the live NOC dashboard to see what 28 tunneled services looks like when everything is green.
 
-*— Ced*
+*- Ced*
