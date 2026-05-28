@@ -40,7 +40,7 @@ buildExpired = false
 [params.homeInfoParams]
   Title = "Build. Break. Document. Repeat."
   Content = """
-I'm a DevOps and Cloud Infrastructure Engineer at GE Aerospace building production-grade infrastructure at home — \
+I'm a DevOps and Cloud Infrastructure Engineer at GE Aerospace building production-grade infrastructure at home: \
 6-node Proxmox cluster, 12-node K3s Raspberry Pi cluster, full observability stack, and a live NOC dashboard. \
 This blog is where I document the builds, the breaks, and everything in between.
 """
