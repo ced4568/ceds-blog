@@ -1,0 +1,382 @@
+/* ============================================
+   CED'S HOME LAB — CUSTOM OVERRIDES
+   File: assets/css/extended/custom.css
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --border: rgba(45, 212, 191, 0.35);
+  --ced-teal:        #2dd4bf;
+  --ced-teal-border: rgba(45, 212, 191, 0.35);
+  --ced-teal-dim:    rgba(45, 212, 191, 0.08);
+  --card-bg:         #d8dce3;
+  --border-dark:     #1e2330;
+}
+
+/* ── BODY ── */
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 300;
+  background-color: #e5e8ed !important;
+}
+
+:root:not([data-theme="dark"]) {
+  --theme: #e5e8ed !important;
+}
+
+.dark body,
+[data-theme="dark"] body {
+  background-color: #0d0f14 !important;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+/* ── HERO ── */
+.home-info .profile_inner h1,
+.profile_inner h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--ced-teal) !important;
+  margin-bottom: 1rem !important;
+}
+
+.home-info .profile_inner p,
+.profile_inner p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #8a93a8 !important;
+  max-width: 580px;
+}
+
+.profile_inner .social-icons a {
+  color: var(--ced-teal) !important;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.profile_inner .social-icons a:hover {
+  opacity: 1;
+}
+
+/* ── BLOG CARDS ── */
+/* Light mode: light grey with teal border */
+.post-entry {
+  background-color: #d8dce3 !important;
+  border: 1px solid var(--ced-teal-border) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+  position: relative;
+  overflow: hidden;
+  transform: none !important;
+  transition: none !important;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* Dark mode: slate-gray cards */
+.dark .post-entry,
+[data-theme="dark"] .post-entry {
+  background-color: #1a1d26 !important;
+}
+
+/* Left teal stripe */
+.post-entry::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--ced-teal);
+}
+
+/* Card title — light mode */
+.post-entry .entry-header h2,
+.post-entry:hover .entry-header h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.5rem !important;
+  color: #1a1d26 !important;
+}
+
+/* Card title — dark mode */
+.dark .post-entry .entry-header h2,
+.dark .post-entry:hover .entry-header h2,
+[data-theme="dark"] .post-entry .entry-header h2,
+[data-theme="dark"] .post-entry:hover .entry-header h2 {
+  color: #eaeef5 !important;
+}
+
+/* Card excerpt — light mode */
+.post-entry .entry-content p {
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #2d3341 !important;
+  margin-bottom: 0.75rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card excerpt — dark mode */
+.dark .post-entry .entry-content p,
+[data-theme="dark"] .post-entry .entry-content p {
+  color: #8a93a8 !important;
+}
+
+/* Card meta — light mode */
+.post-entry .entry-footer {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.06em !important;
+  color: #4a5268 !important;
+  margin-top: 0.75rem;
+}
+
+/* Card meta — dark mode */
+.dark .post-entry .entry-footer,
+[data-theme="dark"] .post-entry .entry-footer {
+  color: #4a5268 !important;
+}
+
+/* Card image — light mode */
+.post-entry .entry-cover,
+.post-entry .entry-cover a {
+  background-color: #d8dce3 !important;
+}
+
+/* Card image — dark mode */
+.dark .post-entry .entry-cover,
+.dark .post-entry .entry-cover a,
+[data-theme="dark"] .post-entry .entry-cover,
+[data-theme="dark"] .post-entry .entry-cover a {
+  background-color: #1a1d26 !important;
+}
+
+.post-entry .entry-cover img {
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  width: 100%;
+  object-fit: cover;
+  max-height: 220px;
+  border: 1px solid var(--border-dark);
+}
+
+/* ── LIGHT MODE — PAGES, NAV, FOOTER, CONTENT ── */
+
+/* List pages (ebooks, tags, etc) inherit body bg */
+:root:not([data-theme="dark"]) .list {
+  background: #e5e8ed !important;
+}
+
+/* Single pages (about, posts) */
+:root:not([data-theme="dark"]) .post-content p,
+:root:not([data-theme="dark"]) .post-content li {
+  color: #2d3341 !important;
+}
+
+:root:not([data-theme="dark"]) .post-content h2,
+:root:not([data-theme="dark"]) .post-content h3 {
+  color: #1a1d26 !important;
+}
+
+:root:not([data-theme="dark"]) .page-header h1 {
+  color: var(--ced-teal) !important;
+}
+
+/* Hero description — readable in light mode */
+:root:not([data-theme="dark"]) .profile_inner p {
+  color: #3a4155 !important;
+}
+
+/* Ebooks table */
+:root:not([data-theme="dark"]) .post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem !important;
+}
+
+:root:not([data-theme="dark"]) .post-content table th {
+  background: #c8ccd4 !important;
+  color: #1a1d26 !important;
+  padding: 0.65rem 1rem !important;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+:root:not([data-theme="dark"]) .post-content table td {
+  background: #d8dce3 !important;
+  color: #2d3341 !important;
+  padding: 0.6rem 1rem !important;
+  border-top: 1px solid #c8ccd4 !important;
+}
+
+:root:not([data-theme="dark"]) .post-content table tr:nth-child(even) td {
+  background: #cfd3da !important;
+}
+
+/* Inline code — light mode */
+:root:not([data-theme="dark"]) .post-content code {
+  background: #c8ccd4 !important;
+  border: 1px solid #b8bcc6 !important;
+  color: #0d7a6e !important;
+}
+
+/* ── NAV ── */
+#site-header,
+.nav {
+  border-bottom: 1px solid #1e2330;
+}
+
+:root:not([data-theme="dark"]) #site-header,
+:root:not([data-theme="dark"]) .nav {
+  background-color: #d0d4db !important;
+  border-bottom: 1px solid #b8bcc6 !important;
+}
+
+.dark #site-header,
+.dark .nav {
+  background-color: rgba(13, 15, 20, 0.95) !important;
+  backdrop-filter: blur(8px);
+}
+
+.logo a,
+.logo-text {
+  font-family: 'DM Mono', monospace !important;
+  letter-spacing: 0.06em;
+}
+
+/* ── PAGE HEADER ── */
+.page-header h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  color: var(--ced-teal) !important;
+  letter-spacing: -0.01em;
+}
+
+/* ── SINGLE POST ── */
+.post-header h1.post-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.dark .post-header h1,
+[data-theme="dark"] .post-header h1 {
+  color: #eaeef5 !important;
+}
+
+.post-content p {
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+  font-weight: 300 !important;
+}
+
+.post-content h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+}
+
+.post-content code {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 0.88em !important;
+  background: #0f1117 !important;
+  border: 1px solid #1e2330 !important;
+  border-radius: 4px !important;
+  padding: 1px 6px !important;
+  color: var(--ced-teal) !important;
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--ced-teal) !important;
+  background: var(--ced-teal-dim) !important;
+  border-radius: 0 6px 6px 0 !important;
+  padding: 1.5rem 2rem !important;
+  margin: 2rem 0 !important;
+}
+
+.post-content blockquote p {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 1.15rem !important;
+  margin: 0 !important;
+}
+
+/* ── FOOTER ── */
+footer {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+:root:not([data-theme="dark"]) footer {
+  background-color: #d0d4db !important;
+  border-top: 1px solid #b8bcc6 !important;
+  color: #4a5268 !important;
+}
+
+.dark footer,
+[data-theme="dark"] footer {
+  background-color: #0d0f14 !important;
+  border-top: 1px solid #1e2330 !important;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.post-entry:nth-child(1) { animation-delay: 0.05s; }
+.post-entry:nth-child(2) { animation-delay: 0.12s; }
+.post-entry:nth-child(3) { animation-delay: 0.19s; }
+.post-entry:nth-child(4) { animation-delay: 0.26s; }
+.post-entry:nth-child(5) { animation-delay: 0.33s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .subscribe-form form,
+  #mc_embed_signup form {
+    flex-direction: column !important;
+  }
+  .subscribe-form button,
+  #mc_embed_signup input[type="submit"] {
+    width: 100% !important;
+  }
+}
+
+.dark {
+  --entry: #1a1d26;
+  --border: rgba(45, 212, 191, 0.35);
+}
+
+:root[data-theme="dark"] {
+  --entry: #1a1d26;
+  --border: rgba(45, 212, 191, 0.35);
+  --theme: #0d0f14;
+}

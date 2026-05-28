@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Grafana on Ced&#39;s Home Lab</title>
-    <link>http://localhost:1313/tags/grafana/</link>
+    <link>https://cedshomelab.com/tags/grafana/</link>
     <description>Recent content in Grafana on Ced&#39;s Home Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cedshomelab.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Built a Live NOC Dashboard for My Homelab Using Grafana &#43; Prometheus</title>
-      <link>http://localhost:1313/posts/grafana-prometheus-homelab-noc/</link>
+      <link>https://cedshomelab.com/posts/grafana-prometheus-homelab-noc/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/grafana-prometheus-homelab-noc/</guid>
-      <description>How I built a real-time homelab NOC dashboard using Grafana, Prometheus, Blackbox Exporter, Kubernetes, and Proxmox to monitor infrastructure like an enterprise environment — and the hard lessons learned along the way.</description>
+      <guid>https://cedshomelab.com/posts/grafana-prometheus-homelab-noc/</guid>
+      <description>How I built a real-time homelab NOC dashboard using Grafana, Prometheus, Blackbox Exporter, Kubernetes, and Proxmox to monitor infrastructure like an enterprise environment and the hard lessons learned along the way.</description>
     </item>
   </channel>
 </rss>

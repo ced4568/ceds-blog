@@ -2,90 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://cedshomelab.com/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare/</loc>
+    <loc>https://cedshomelab.com/tags/cloudflare/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/devops/</loc>
+    <loc>https://cedshomelab.com/tags/devops/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/homelab/</loc>
+    <loc>https://cedshomelab.com/tags/homelab/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/infrastructure/</loc>
+    <loc>https://cedshomelab.com/tags/infrastructure/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/networking/</loc>
+    <loc>https://cedshomelab.com/tags/networking/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://cedshomelab.com/posts/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://cedshomelab.com/tags/security/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/self-hosted/</loc>
+    <loc>https://cedshomelab.com/tags/self-hosted/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://cedshomelab.com/tags/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tunnels/</loc>
+    <loc>https://cedshomelab.com/tags/tunnels/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cloudflare-tunnels-zero-open-ports/</loc>
+    <loc>https://cedshomelab.com/posts/cloudflare-tunnels-zero-open-ports/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grafana/</loc>
+    <loc>https://cedshomelab.com/tags/grafana/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/grafana-prometheus-homelab-noc/</loc>
+    <loc>https://cedshomelab.com/posts/grafana-prometheus-homelab-noc/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/infrastructure-monitoring/</loc>
+    <loc>https://cedshomelab.com/tags/infrastructure-monitoring/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
+    <loc>https://cedshomelab.com/tags/kubernetes/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/monitoring/</loc>
+    <loc>https://cedshomelab.com/tags/monitoring/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/noc/</loc>
+    <loc>https://cedshomelab.com/tags/noc/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/observability/</loc>
+    <loc>https://cedshomelab.com/tags/observability/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/prometheus/</loc>
+    <loc>https://cedshomelab.com/tags/prometheus/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/proxmox/</loc>
+    <loc>https://cedshomelab.com/tags/proxmox/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/high-availability/</loc>
+    <loc>https://cedshomelab.com/tags/high-availability/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/trash-dell-to-proxmox-cluster/</loc>
+    <loc>https://cedshomelab.com/posts/trash-dell-to-proxmox-cluster/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/origin-story/</loc>
+    <loc>https://cedshomelab.com/tags/origin-story/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
+    <loc>https://cedshomelab.com/tags/raspberry-pi/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/self-hosting/</loc>
+    <loc>https://cedshomelab.com/tags/self-hosting/</loc>
     <lastmod>2026-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://cedshomelab.com/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://cedshomelab.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/ebooks/</loc>
+    <loc>https://cedshomelab.com/ebooks/</loc>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://cedshomelab.com/series/</loc>
   </url>
 </urlset>
