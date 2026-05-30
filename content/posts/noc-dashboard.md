@@ -1,10 +1,11 @@
 ---
 title: "How I Built a Live NOC Dashboard for My Homelab Using Grafana + Prometheus"
 slug: "grafana-prometheus-homelab-noc"
+weight: 5
 date: 2026-05-10
 author: ["Chase Dumphord"]
-tags: ["grafana", "prometheus", "homelab", "observability", "monitoring", "noc", "kubernetes", "proxmox", "devops", "infrastructure-monitoring"]
-description: "How I built a real-time homelab NOC dashboard using Grafana, Prometheus, Blackbox Exporter, Kubernetes, and Proxmox to monitor infrastructure like an enterprise environment and the hard lessons learned along the way."
+tags: ["grafana", "prometheus", "homelab", "observability", "monitoring", "noc", "kubernetes", "proxmox", "devops", "infrastructure monitoring"]
+description: "How I built a real time homelab NOC dashboard using Grafana, Prometheus, Blackbox Exporter, Kubernetes, and Proxmox to monitor infrastructure like an enterprise environment and the hard lessons learned along the way."
 cover:
   image: /images/noc-dashboard-cover.png
   alt: "Ced's Home Lab NOC Dashboard Production Command Center"
@@ -19,7 +20,7 @@ And start asking:
 
 *"How do I know when this thing breaks?"*
 
-That question sent me down the rabbit hole of observability, monitoring, and infrastructure dashboards. Which eventually turned into something I probably took way too far a full-blown **Network Operations Center (NOC) dashboard** for my homelab.
+That question sent me down the rabbit hole of observability, monitoring, and infrastructure dashboards. Which eventually turned into something I probably took way too far a full blown **Network Operations Center (NOC) dashboard** for my homelab.
 
 And honestly? I regret absolutely nothing.
 
@@ -27,7 +28,7 @@ And honestly? I regret absolutely nothing.
 
 ## Why I Built a NOC Dashboard
 
-When you're running a 6-node Proxmox cluster, a 12-node Kubernetes cluster, TrueNAS storage, and a dozen self-hosted services things break. Containers fail. Storage fills up. Services go offline. Networks get weird.
+When you're running a 6-node Proxmox cluster, a 12-node Kubernetes cluster, TrueNAS storage, and a dozen self hosted services things break. Containers fail. Storage fills up. Services go offline. Networks get weird.
 
 I found out the hard way. One weekend I came home to find three services had been down for hours. I hadn't noticed. That was the day I decided checking systems manually wasn't the move.
 
@@ -45,7 +46,7 @@ Here's what powers the observability platform all running on a dedicated Proxmox
 
 ### Prometheus
 
-The brain behind the metrics. Prometheus scrapes telemetry from every system across the environment and stores performance data as time-series. It's constantly asking every service:
+The brain behind the metrics. Prometheus scrapes telemetry from every system across the environment and stores performance data as time series. It's constantly asking every service:
 
 *"Hey… are you alive?"*
 
@@ -53,12 +54,12 @@ The brain behind the metrics. Prometheus scrapes telemetry from every system acr
 
 ### Grafana
 
-The visual side of the operation. Dashboards, real-time metrics, health indicators, graphs, status panels. All the *"make me feel like I'm running a real NOC"* stuff.
+The visual side of the operation. Dashboards, real time metrics, health indicators, graphs, status panels. All the *"make me feel like I'm running a real NOC"* stuff.
 
 Three production dashboards:
 
-- **Production Command Center v3** Executive NOC view. NOC Health Score, Core Services UP/DOWN counter, average latency, K3s nodes online, Proxmox nodes online, per-service status tiles. Designed for quick status checks and let's be honest portfolio demonstrations.
-- **Deep Observability v3** Full drill-down for active troubleshooting. Every layer of the stack in one view.
+- **Production Command Center v3** Executive NOC view. NOC Health Score, Core Services UP/DOWN counter, average latency, K3s nodes online, Proxmox nodes online, per service status tiles. Designed for quick status checks and let's be honest portfolio demonstrations.
+- **Deep Observability v3** Full drill down for active troubleshooting. Every layer of the stack in one view.
 - **K3s Elite Observability v1** Dedicated Kubernetes dashboard. Node CPU, memory, pod phase by namespace, container restarts, disk usage across all 12 nodes.
 
 ### The Exporter Stack
@@ -74,7 +75,7 @@ This is where most of the actual work happened. Eight exporters feed data into P
 | Blackbox Exporter | HTTP/TCP probes for service uptime and latency |
 | TrueNAS Graphite Exporter | Storage pool health and dataset usage |
 | Unpoller | UniFi network device metrics, client counts, throughput |
-| metrics-server | Real-time K3s resource usage for kubectl top |
+| metrics server | Real time K3s resource usage for kubectl top |
 
 Getting all of these running cleanly took more time than building the dashboards. Each exporter has its own quirks, its own config format, and its own way of silently failing without telling you why.
 
@@ -84,7 +85,7 @@ Getting all of these running cleanly took more time than building the dashboards
 
 **Proxmox Cluster: 6 Nodes**
 
-Real-time visibility into BigWorld, Biggie, Snoop, TooShort, Tupac, and DrDre. Host health, resource utilization, node uptime, VM and container status. When a node goes sideways I know before the VMs do.
+Real time visibility into BigWorld, Biggie, Snoop, TooShort, Tupac, and DrDre. Host health, resource utilization, node uptime, VM and container status. When a node goes sideways I know before the VMs do.
 
 **K3s Cluster: 12 Nodes**
 
@@ -92,7 +93,7 @@ Real-time visibility into BigWorld, Biggie, Snoop, TooShort, Tupac, and DrDre. H
 
 **Network Services**
 
-Reverse proxies, Cloudflare tunnels, self-hosted dashboards, monitoring services all checked continuously via Blackbox Exporter HTTP and TCP probes. Because "it works on localhost" doesn't count.
+Reverse proxies, Cloudflare tunnels, self hosted dashboards, monitoring services all checked continuously via Blackbox Exporter HTTP and TCP probes. Because "it works on localhost" doesn't count.
 
 **Edge Systems**
 
@@ -106,7 +107,7 @@ Building this taught me things no tutorial covers. Here are the four that hit ha
 
 ### 1. Disk space matters more than you think
 
-Prometheus stores metrics as time-series data on disk. My initial Proxmox container was 3.86GB. After a few weeks of scraping 18 nodes every 15 seconds, it was at 94% capacity.
+Prometheus stores metrics as time series data on disk. My initial Proxmox container was 3.86GB. After a few weeks of scraping 18 nodes every 15 seconds, it was at 94% capacity.
 
 When it hit 100%, every scrape started failing silently. All targets showed as DOWN. Every dashboard went red. The entire stack looked broken when the actual problem was a full disk.
 
@@ -158,7 +159,7 @@ root_url = https://grafana.cedshomelab.com
 
 One line in the config, restart Grafana, and the public URL generates correctly. Simple fix, not obvious if you've never hit it before.
 
-The live dashboard is available at [noc.chasedumphord.com](https://noc.chasedumphord.com) no login required, real data, auto-refreshes every 30 seconds.
+The live dashboard is available at [noc.chasedumphord.com](https://noc.chasedumphord.com) no login required, real data, auto refreshes every 30 seconds.
 
 ---
 
@@ -178,8 +179,8 @@ The observability stack is solid but there's more to build:
 
 - **Alerting** Grafana alert rules feeding into Discord or Telegram so I find out about problems before I find out about problems
 - **Log aggregation** Loki for centralized log collection across all nodes
-- **Long-term storage** InfluxDB or a remote Prometheus write target for metrics beyond local retention
-- **Automated remediation** self-healing infrastructure that restarts failed services automatically
+- **Long term storage** InfluxDB or a remote Prometheus write target for metrics beyond local retention
+- **Automated remediation** self healing infrastructure that restarts failed services automatically
 
 Each of these is a future post.
 

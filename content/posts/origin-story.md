@@ -1,10 +1,11 @@
 ---
 title: "I Found a Dell Tower in the Trash. Five Years Later It's a 6-Node Proxmox HA Cluster."
 slug: "trash-dell-to-proxmox-cluster"
+weight: 3
 date: 2026-05-07
 author: ["Chase Dumphord"]
 tags: ["homelab", "proxmox", "self-hosting", "high-availability", "kubernetes", "raspberry-pi", "infrastructure", "origin-story"]
-description: "The story behind Ced's Home Lab how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise-grade homelab infrastructure."
+description: "The story behind Ced's Home Lab how a discarded Dell tower turned into a 6-node Proxmox HA cluster running Grafana, Prometheus, Kubernetes, TrueNAS, and enterprise grade homelab infrastructure."
 cover:
   image: /images/origin-story-cover.png
   alt: "Ced's Home Lab: From a trash Dell to a 6-node Proxmox cluster"
@@ -23,7 +24,7 @@ Now before anybody starts judging me yes, I know how this sounds. But if you're 
 
 And that's exactly how Ced's Home Lab started.
 
-No fancy rack. No enterprise gear. No thousand-dollar server. Just a random Dell tower somebody threw away and way too much curiosity.
+No fancy rack. No enterprise gear. No thousand dollar server. Just a random Dell tower somebody threw away and way too much curiosity.
 
 That server got a name: **BigWorld**. One of my nicknames. Felt right.
 
@@ -33,9 +34,9 @@ That server got a name: **BigWorld**. One of my nicknames. Felt right.
 
 I've always been the kind of person who likes figuring out how things work. Electronics. Computers. Networks. Industrial systems. If it had wires or data moving through it, I wanted to understand it.
 
-Back then I was working as a contractor for the Department of Homeland Security. I wasn't thinking *"I'm going to build an enterprise-grade homelab."* I was thinking *"Can I make this thing useful again?"*
+Back then I was working as a contractor for the Department of Homeland Security. I wasn't thinking *"I'm going to build an enterprise grade homelab."* I was thinking *"Can I make this thing useful again?"*
 
-BigWorld became a playground. Then a learning tool. Then a media server. Then I discovered **Proxmox VE** an open-source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home and everything changed.
+BigWorld became a playground. Then a learning tool. Then a media server. Then I discovered **Proxmox VE** an open source virtualization platform that lets you run virtual machines, containers, clustering, backups, and high availability from home and everything changed.
 
 Instead of *"one computer does one thing"*, it became *"one machine can become an entire ecosystem."*
 
@@ -63,7 +64,7 @@ One VM became ten. The media server became a proper hypervisor. I kept following
 
 **Compute: Proxmox HA Cluster (6 Nodes)**
 
-BigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooShort, Tupac, and DrDre. The naming convention was non-negotiable.
+BigWorld is still the primary node. It has five friends now: Biggie, Snoop, TooShort, Tupac, and DrDre. The naming convention was non negotiable.
 
 | Node | Role |
 |------|------|
@@ -92,7 +93,7 @@ Prometheus + Grafana + 8 exporters running 24/7. Live dashboard at [noc.chasedum
 
 **Edge: APRS RF iGate**
 
-A dual-node system that receives APRS radio packets and forwards them to the internet. Bridges RF signals into IP infrastructure. Because sometimes the most interesting engineering problems involve an antenna and a Raspberry Pi Zero.
+A dual node system that receives APRS radio packets and forwards them to the internet. Bridges RF signals into IP infrastructure. Because sometimes the most interesting engineering problems involve an antenna and a Raspberry Pi Zero.
 
 ---
 
@@ -102,7 +103,7 @@ People ask me sometimes: *"Why build all this?"*
 
 Fair question. Nobody needs a homelab this ridiculous.
 
-But I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems MTConnect agents, machine data integration, real-time operational visibility. That environment changed how I think about infrastructure.
+But I work on the Digital Team at GE Aerospace building data pipelines and dashboards for industrial systems MTConnect agents, machine data integration, real time operational visibility. That environment changed how I think about infrastructure.
 
 When you're building systems where downtime has real consequences, you stop treating monitoring as optional. You stop treating network segmentation as something you'll get to eventually. You build it right from the start.
 
@@ -110,7 +111,7 @@ The homelab reflects that now. Everything I build at home mirrors patterns I app
 
 There's a huge difference between *"I watched a video about Kubernetes"* and *"I run a 12-node Kubernetes cluster on Raspberry Pis with 117 days of uptime."*
 
-That hands-on experience matters. A lot.
+That hands on experience matters. A lot.
 
 ---
 
@@ -120,7 +121,7 @@ This blog is where I'll document everything: homelab builds, infrastructure proj
 
 Every week there's something new breaking, something new to learn, something new to build. That's the process. And honestly? That's the fun part.
 
-The next post covers **Ced's NOC** how I built a production-style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.
+The next post covers **Ced's NOC** how I built a production style monitoring platform on top of this infrastructure, what the full exporter stack looks like, and the lessons I learned the hard way.
 
 If you're building something at home that's taught you more than any certification, I'd love to hear about it.
 

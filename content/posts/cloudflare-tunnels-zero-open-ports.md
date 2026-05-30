@@ -1,6 +1,7 @@
 ---
 title: "Zero Open Ports: How I Expose 28 Homelab Services Without Touching My Router"
 slug: "cloudflare-tunnels-zero-open-ports"
+weight: 4
 date: 2026-05-11
 authors: ["Chase Dumphord"]
 tags: ["cloudflare", "networking", "homelab", "self-hosted", "security", "devops", "infrastructure", "tunnels"]
@@ -38,7 +39,7 @@ Cloudflare Tunnels work differently. Instead of opening inbound ports, your serv
 
 Zero open ports. Not "fewer open ports." Zero.
 
-The first time I read that I thought it sounded too good. But the architecture makes sense when you think about it outbound connections are almost universally allowed by firewalls, and Cloudflare's network handles all the public-facing exposure. Your home IP never appears anywhere in the chain.
+The first time I read that I thought it sounded too good. But the architecture makes sense when you think about it outbound connections are almost universally allowed by firewalls, and Cloudflare's network handles all the public facing exposure. Your home IP never appears anywhere in the chain.
 
 ---
 
@@ -52,7 +53,7 @@ The first services I exposed were Proxmox and Dashy.
 
 Proxmox because it's the brain of the operation being able to pull up my cluster from anywhere without VPN was a game changer. The first time I checked on a VM from my phone at work I genuinely stopped and appreciated what I'd built.
 
-Dashy because it solved the IP problem immediately. Dashy is a self-hosted dashboard where I store every service URL. Once it was behind a tunnel at `dashy.cedshomelab.com`, I had a single URL I could hit from anywhere that gave me organized access to everything else. The sticky note went in the trash.
+Dashy because it solved the IP problem immediately. Dashy is a self hosted dashboard where I store every service URL. Once it was behind a tunnel at `dashy.cedshomelab.com`, I had a single URL I could hit from anywhere that gave me organized access to everything else. The sticky note went in the trash.
 
 ---
 
@@ -64,7 +65,7 @@ This is the part that took me a while to understand, and if you've used Cloudfla
 
 **DNS Only (grey cloud):** Cloudflare is just acting as a DNS resolver. Traffic goes directly to whatever IP the record points to. Cloudflare provides no protection, no hiding. Your origin IP is exposed.
 
-For Cloudflare Tunnels, you use **DNS only** on the CNAME records that point to your tunnel. The tunnel itself handles the security  Cloudflare's network is the proxy layer. If you accidentally set those records to proxied, you'll break the tunnel because you're trying to double-proxy traffic through Cloudflare.
+For Cloudflare Tunnels, you use **DNS only** on the CNAME records that point to your tunnel. The tunnel itself handles the security  Cloudflare's network is the proxy layer. If you accidentally set those records to proxied, you'll break the tunnel because you're trying to double proxy traffic through Cloudflare.
 
 The practical rule I landed on: tunneled services use DNS only CNAME records. Anything pointing directly at a public IP uses proxied. Once I understood that distinction, everything clicked.
 
@@ -94,8 +95,8 @@ Cloudflare Tunnels didn't just solve my remote access problem. They made my home
 
 ## What's Next
 
-If you want the full step-by-step setup guide (how to create a tunnel, configure routes, set up the wildcard DNS record, and manage 28+ services without losing your mind) I'm putting that in an upcoming ebook.
+If you want the full step by step setup guide (how to create a tunnel, configure routes, set up the wildcard DNS record, and manage 28+ services without losing your mind) I'm putting that in an upcoming ebook.
 
 In the meantime, subscribe below to get notified when it drops, and check out the live NOC dashboard to see what 28 tunneled services looks like when everything is green.
 
-*- Ced*
+* Ced*
