@@ -7,11 +7,20 @@ layout: "about"
 {{% rawhtml %}}
 <div class="about-grid">
   <div class="about-bio">
-    <h2>Hey, I'm Chase (most people call me Ced).</h2>
-    <p>I'm a <strong>DevOps and Cloud Infrastructure Engineer at GE Aerospace</strong> by day, homelabber by night.</p>
-    <p>I run a 6-node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), a VLAN-segmented UniFi network, TrueNAS storage, and a live NOC dashboard, all out of my house.</p>
-    <p>This blog documents the real builds, real incidents, and real configs. No fluff.</p>
+    
+<h2>How’s it going, I’m Chase AKA Ced.</h2>
+
+<p>I work in <strong>Digital Engineering at GE Aerospace</strong> by day and spend way too much time building infrastructure in my homelab by night.</p>
+
+<p>What started as curiosity turned into a full blown obsession with Linux, Kubernetes, observability, automation, cloud infrastructure, and building real systems that actually solve problems.</p>
+
+<p>At home, I run a 6-node Proxmox VE cluster, a 12-node Raspberry Pi K3s cluster, a full observability stack (Prometheus, Grafana, Alertmanager), a VLAN-segmented UniFi network, TrueNAS storage, Cloudflare tunnels, and a live NOC dashboard all out of my house.</p>
+
+<p>This blog is where I document the real builds, real incidents, troubleshooting, wins, failures, configs, and lessons learned while leveling up in DevOps, Platform, Cloud, and Infrastructure Engineering.</p>
+
+<p><strong>No fluff. No fake guru stuff. Just real tech, real learning, and real systems.</strong></p>
   </div>
+
   <div class="about-stack-card">
     <h3>The Stack</h3>
     <table>
@@ -30,6 +39,7 @@ layout: "about"
         <tr><td><strong>Automation</strong></td><td>n8n &middot; Node-RED &middot; Home Assistant</td></tr>
         <tr><td><strong>CI/CD</strong></td><td>Jenkins &middot; GitLab</td></tr>
         <tr><td><strong>VPS</strong></td><td>Hetzner &middot; 2 nodes</td></tr>
+        <tr><td><strong>Cloud</strong></td><td>AWS &middot; Azure &middot; Google Cloud</td></tr>
       </tbody>
     </table>
   </div>
@@ -43,3 +53,4 @@ layout: "about"
 - LinkedIn: [chase-dumphord](https://linkedin.com/in/chase-dumphord)
 - Portfolio: [chasedumphord.com](https://chasedumphord.com)
 - Work with me: [Synthos](https://synthossystems.com)
+- Buy me a coffee: [buymeacoffee.com/cedshomelab](https://buymeacoffee.com/cedshomelab)

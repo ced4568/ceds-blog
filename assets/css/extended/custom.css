@@ -3,7 +3,6 @@
    File: assets/css/extended/custom.css
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
 
 :root {
   --border: rgba(45, 212, 191, 0.35);
@@ -379,4 +378,88 @@ footer {
   --entry: #1a1d26;
   --border: rgba(45, 212, 191, 0.35);
   --theme: #0d0f14;
+}
+
+/* ── ABOUT PAGE ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+.about-stack-card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-left: 3px solid var(--ced-teal);
+}
+
+:root:not([data-theme="dark"]) .about-stack-card {
+  background: #d8dce3;
+}
+
+[data-theme="dark"] .about-stack-card {
+  background: #1a1d26;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+
+.about-link-btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  color: var(--ced-teal) !important;
+  transition: background 0.2s;
+}
+
+.about-link-btn:hover {
+  background: rgba(45, 212, 191, 0.1);
+}
+
+.about-work-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-decoration: none !important;
+  background: var(--ced-teal);
+  color: #0d0f14 !important;
+  transition: opacity 0.2s;
+}
+
+.about-work-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── FORM INPUTS ── */
+input[type="email"],
+input[type="text"] {
+  color: #1a1d26 !important;
+  background-color: #f5f7fa !important;
+  border: 1px solid rgba(45, 212, 191, 0.4) !important;
+  border-radius: 4px !important;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder {
+  color: #8a93a8 !important;
+  opacity: 1 !important;
 }

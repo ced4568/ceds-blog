@@ -32,10 +32,15 @@ buildExpired = false
   showtoc = true
   tocopen = false
 
+[params.cover]
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = false
+
 [params.label]
   text = "Ced's Home Lab"
   icon = "/images/logo-horizontal.png"
-  iconHeight = 36
+  iconHeight = 64
 
 [params.homeInfoParams]
   Title = "Build. Break. Document. Repeat."
