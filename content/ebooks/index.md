@@ -15,6 +15,18 @@ All ebooks are available on Gumroad. Follow the store to get notified when new t
 
 <br><br>
 
+## Available Now
+
+### Homelab to Income
+
+Turn your homelab into proof of real engineering skills and a revenue stream. Covers how to document your builds, position your homelab work for hiring managers and clients, and create digital products from your technical knowledge.
+
+<a href="https://chasedumphord.gumroad.com/l/cmuuu" target="_blank" style="display: inline-block; background-color: #2dd4bf; color: #0d0f14; padding: 12px 28px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 16px;">Get the Ebook →</a>
+
+<br><br>
+
+---
+
 ## Coming Soon
 
 | Title | Topic | Status |
