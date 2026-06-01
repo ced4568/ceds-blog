@@ -31,7 +31,6 @@ Turn your homelab into proof of real engineering skills and a revenue stream. Co
 
 | Title | Topic | Status |
 |---|---|---|
-| The Homelab Starter Kit | Proxmox, networking, and storage from scratch | In progress |
 | K3s on Raspberry Pi | 12-node Kubernetes cluster build from zero | Planned |
 | Prometheus & Grafana from Zero | Full observability stack setup end to end | Planned |
 | Cloudflare Tunnels Handbook | Zero open ports, secure service exposure | Planned |
