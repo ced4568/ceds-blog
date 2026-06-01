@@ -46,6 +46,19 @@ layout: "about"
 </div>
 {{% /rawhtml %}}
 
+{{% rawhtml %}}
+<div class="newsletter-signup">
+  <h3>Join the Homelab Community</h3>
+  <p>Get weekly insights on turning your homelab into income + exclusive behind-the-scenes updates</p>
+  <form action="https://newsletter.synthossystems.com/subscription/form" method="post">
+    <input type="hidden" name="l" value="c04e5170-1096-425e-9f55-3da726ea0a8a">
+    <input type="email" name="email" placeholder="Your email address" required>
+    <input type="text" name="name" placeholder="First name (optional)">
+    <button type="submit">Join the Community</button>
+  </form>
+</div>
+{{% /rawhtml %}}
+
 ---
 
 ## Find Me
