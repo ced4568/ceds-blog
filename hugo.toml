@@ -71,6 +71,12 @@ This blog is where I document the builds, the breaks, and everything in between.
     weight = 10
 
   [[menu.main]]
+    identifier = "newsletter"
+    name = "Newsletter"
+    url = "/newsletter/"
+    weight = 15
+
+  [[menu.main]]
     identifier = "ebooks"
     name = "Ebooks"
     url = "/ebooks/"
