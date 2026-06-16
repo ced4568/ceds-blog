@@ -1,7 +1,23 @@
+<!-- =============================================================
+  SECTION: Custom Fonts
+  Loads Google Fonts used across the site.
+  - Playfair Display: headings and titles (serif, editorial feel)
+  - DM Sans: body text (clean, modern sans-serif)
+  - DM Mono: code blocks and inline code
+  preconnect tags tell the browser to open the connection early
+  so fonts load faster.
+============================================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+<!-- =============================================================
+  SECTION: Favicons
+  Browser tab icon and device home screen icons.
+  Multiple sizes are declared so the browser picks the right one
+  depending on where it is displayed (tab, bookmarks, phone home
+  screen, etc.).
+============================================================= -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -10,7 +26,17 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 
-<!-- Matomo -->
+<!-- =============================================================
+  SECTION: Matomo Analytics
+  Self-hosted analytics tracker (analytics.synthossystems.com).
+  Tracks page views and link clicks without sending data to
+  third-party services like Google Analytics.
+  - trackPageView: records each page load
+  - enableLinkTracking: records outbound link clicks
+  - setSiteId('1'): identifies this site in the Matomo dashboard
+  The script is loaded asynchronously (g.async=true) so it does
+  not block page rendering.
+============================================================= -->
 <script>
   var _paq = window._paq = window._paq || [];
   _paq.push(['trackPageView']);
@@ -23,4 +49,4 @@
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<!-- End Matomo Code -->
+<!-- End Matomo Analytics -->

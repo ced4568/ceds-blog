@@ -1,2 +1,21 @@
-﻿{{- if not (eq .RelPermalink "/newsletter/") }}{{- partial "subscribe.html" . }}{{- end }}
+<!-- =============================================================
+  SECTION: Newsletter Subscribe Box
+  Shows the email signup form at the bottom of every page
+  EXCEPT the /newsletter/ page itself (it already has a full
+  signup section, so showing the box there would be redundant).
+  The partial "subscribe.html" contains the actual form markup.
+============================================================= -->
+{{- if not (eq .RelPermalink "/newsletter/") }}{{- partial "subscribe.html" . }}{{- end }}
+
+<!-- =============================================================
+  SECTION: Buy Me a Coffee Widget
+  Floating "Support" button in the bottom-right corner of every
+  page. Loads the Buy Me a Coffee widget from their CDN.
+  - data-id: the BMAC account slug (cedshomelab)
+  - data-position / data-x_margin / data-y_margin: positions the
+    widget 18px from the right and bottom edges of the viewport
+  - data-color: yellow button color (#FFDD00)
+  data-cfasync="false" tells Cloudflare Rocket Loader to skip
+  this script so it loads correctly.
+============================================================= -->
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="cedshomelab" data-description="Support Ced's Home Lab!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
